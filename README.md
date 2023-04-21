@@ -1,4 +1,4 @@
-Welcome to my professional portfolio! This repository contains a collection of my data-related projects.
+👋 Welcome to my professional portfolio! This repository contains a collection of my data-related projects.
 
 ## Projects
 
