@@ -7,6 +7,26 @@
 <html>
 	<head>
 		<title>Alan Haro Portfolio</title>
+		<script
+		  src="https://code.jquery.com/jquery-3.4.1.js"
+		  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		  crossorigin="anonymous">
+		</script>
+		<script>
+		function SubForm (){
+			$.ajax({
+				url:'https://api.apispreadsheets.com/data/2QK155K2oFyZaClk/',
+				type:'post',
+				data:$("#myForm").serializeArray(),
+				success: function(){
+				  alert("Contact Info submitted successfully!")
+				},
+				error: function(){
+				  alert("There was an error!")
+				}
+			});
+		}
+		</script>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -30,11 +50,10 @@
 				</nav>
 				<footer>
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://www.linkedin.com/in/alanharo/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+						<li><a href="https://www.instagram.com/alanhescandon/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://github.com/alanharo" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="mailto: ahescandon@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 				</footer>
 			</section>
@@ -91,17 +110,17 @@
 											</div>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+											<a href="https://github.com/alanharo/bike-sharing" target="_blank" class="image"><img src="images/bike_sharing.jpg" alt="" /></a>
 											<div class="inner">
-												<h4>Terraformed a small moon</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<h4>Bike Sharing</h4>
+												<p>Streamlit dashboard displaying insights related to a Bike Sharing dataset in Washington, D.C. The dataset was obtained from Kaggle.</p>
 											</div>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+											<a href="https://github.com/alanharo/credit-default" target="_blank" class="image"><img src="images/credit_default.jpg" alt="" /></a>
 											<div class="inner">
-												<h4>Snapped dark matter in the wild</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<h4>Credit Default</h4>
+												<p>Classification problem that aims to predict if a specific user is prone to default. The end goal is to choose a probability threshold to optimize the company's earnings.</p>
 											</div>
 										</article>
 									</div>
@@ -112,8 +131,8 @@
 							<section id="four">
 								<div class="container">
 									<h3>Contact Me</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
-									<form method="post" action="#">
+									<p>If you want to get in touch be sure to contact me through email. Also be sure to connect with me through my other Social Medias. </p>
+									<form id="myForm">
 										<div class="row gtr-uniform">
 											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
 											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
@@ -121,7 +140,7 @@
 											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
 											<div class="col-12">
 												<ul class="actions">
-													<li><input type="submit" class="primary" value="Send Message" /></li>
+													<li><input type="submit" class="primary" value="Send" onclick="SubForm()" /></li>
 													<li><input type="reset" value="Reset Form" /></li>
 												</ul>
 											</div>
@@ -467,7 +486,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					<section id="footer">
 						<div class="container">
 							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Alan Haro. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
 					</section>
